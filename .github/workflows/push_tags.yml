@@ -2,12 +2,11 @@ name: goreleaser
 
 on:
   push:
-    tags:
-      - "*"
-
-permissions:
-  contents: write
-  packages: write
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   goreleaser:
